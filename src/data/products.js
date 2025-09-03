@@ -1,0 +1,7 @@
+export const products = [
+  { id: 1, name: "Pain complet", price: "2.50€", image: "/assets/pain-complet.jpg", category: "Pains", description: "Un pain complet riche en fibres." },
+  { id: 2, name: "Croissant au beurre", price: "1.20€", image: "/assets/croissants.jpg", category: "Viennoiseries", description: "Croissant feuilleté au beurre pur." },
+  { id: 3, name: "Baguette tradition", price: "1.00€", image: "/assets/baguette-tradition.jpg", category: "Pains", description: "Baguette croustillante avec mie légère." },
+  { id: 4, name: "Pain aux noix", price: "3.00€", image: "/assets/pain-noix.webp", category: "Pains", description: "Pain gourmand aux noix." },
+  { id: 5, name: "Éclair au chocolat", price: "2.80€", image: "/assets/eclair.jpg", category: "Pâtisseries", description: "Éclair garni d'une crème chocolat onctueuse." }
+];
