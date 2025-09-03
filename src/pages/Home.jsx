@@ -6,8 +6,12 @@ export default function Home() {
     <div className="container mx-auto p-6">
       {/* Hero Section */}
       <section className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-[#8B4513]">Bienvenue à la Boulangerie du Parc</h2>
-        <p className="text-gray-600 mt-2">Pain artisanal, croissants frais et gourmandises chaque jour.</p>
+        <h2 className="text-4xl font-bold text-[#8B4513]">
+          Bienvenue à la Boulangerie du Parc
+        </h2>
+        <p className="text-gray-600 mt-2">
+          Pain artisanal, croissants frais et gourmandises chaque jour.
+        </p>
       </section>
 
       {/* Produits phares */}

@@ -25,7 +25,9 @@ export default function Cart() {
               >
                 <div>
                   <h3 className="font-semibold">{item.name}</h3>
-                  <p>{item.price} x {item.quantity}</p>
+                  <p>
+                    {item.price} x {item.quantity}
+                  </p>
                 </div>
                 <button
                   onClick={() => removeFromCart(item.id)}

@@ -1,1 +1,15 @@
 @import "tailwindcss";
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* bloque le scroll horizontal */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE et Edge */
+  scrollbar-width: none; /* Firefox */
+}

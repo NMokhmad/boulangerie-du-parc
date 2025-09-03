@@ -20,21 +20,30 @@ export default function Products() {
       <h2 className="text-3xl font-bold text-[#8B4513] mb-6">Nos Produits</h2>
 
       {/* Onglets catégories */}
-      <div className="flex border-b border-gray-300 mb-6">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setActiveCategory(cat)}
-            className={`px-6 py-2 -mb-px text-lg font-medium border-b-2 transition-colors duration-300
-              ${
-                activeCategory === cat
-                  ? "border-[#8B4513] text-[#8B4513]"
-                  : "border-transparent text-gray-500 hover:text-[#8B4513]"
-              }`}
-          >
-            {cat}
-          </button>
-        ))}
+      <div className="relative">
+        {/* Gradient gauche */}
+        <div className="absolute left-0 top-0 h-full w-6 bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
+
+        {/* Onglets défilants */}
+        <div className="flex border-b border-gray-300 mb-6 overflow-x-auto scrollbar-hide space-x-4 px-2">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`flex-shrink-0 px-6 py-2 -mb-px text-lg font-medium border-b-2 transition-colors duration-300
+                ${
+                  activeCategory === cat
+                    ? "border-[#8B4513] text-[#8B4513]"
+                    : "border-transparent text-gray-500 hover:text-[#8B4513]"
+                }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Gradient droit */}
+        <div className="absolute right-0 top-0 h-full w-6 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
       </div>
 
       {/* Champ de recherche */}
@@ -61,6 +70,3 @@ export default function Products() {
     </div>
   );
 }
-
-
-

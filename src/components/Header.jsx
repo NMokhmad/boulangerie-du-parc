@@ -29,13 +29,26 @@ export default function Header() {
         <h1 className="text-2xl font-bold">Boulangerie du Parc</h1>
 
         <nav className="hidden md:flex items-center gap-6">
-          <Link to="/" className="hover:text-[#D9A066]">Accueil</Link>
-          <Link to="/about" className="hover:text-[#D9A066]">À propos</Link>
-          <Link to="/products" className="hover:text-[#D9A066]">Produits</Link>
-          <Link to="/contact" className="hover:text-[#D9A066]">Contact</Link>
+          <Link to="/" className="hover:text-[#D9A066]">
+            Accueil
+          </Link>
+          <Link to="/about" className="hover:text-[#D9A066]">
+            À propos
+          </Link>
+          <Link to="/products" className="hover:text-[#D9A066]">
+            Produits
+          </Link>
+          <Link to="/contact" className="hover:text-[#D9A066]">
+            Contact
+          </Link>
         </nav>
 
-        <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>☰</button>
+        <button
+          className="md:hidden text-white"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          ☰
+        </button>
 
         <div className="relative ml-4" ref={cartRef}>
           <button
@@ -53,13 +66,27 @@ export default function Header() {
                 <div className="space-y-4">
                   <ul className="space-y-2">
                     {cart.map((item) => (
-                      <li key={item.id} className="flex items-center gap-3 border-b pb-2">
-                        <img src={item.image} alt={item.name} className="w-12 h-12 object-cover rounded" />
+                      <li
+                        key={item.id}
+                        className="flex items-center gap-3 border-b pb-2"
+                      >
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="w-12 h-12 object-cover rounded"
+                        />
                         <div className="flex-1">
                           <p className="font-medium">{item.name}</p>
-                          <p className="text-sm text-gray-600">{item.price} x {item.quantity}</p>
+                          <p className="text-sm text-gray-600">
+                            {item.price} x {item.quantity}
+                          </p>
                         </div>
-                        <button onClick={() => removeFromCart(item.id)} className="text-red-500 hover:underline text-sm">Supprimer</button>
+                        <button
+                          onClick={() => removeFromCart(item.id)}
+                          className="text-red-500 hover:underline text-sm"
+                        >
+                          Supprimer
+                        </button>
                       </li>
                     ))}
                   </ul>
@@ -67,7 +94,13 @@ export default function Header() {
                     <span>Total :</span>
                     <span>{total.toFixed(2)} €</span>
                   </div>
-                  <Link to="/cart" className="block text-center bg-[#8B4513] text-white px-4 py-2 rounded-lg hover:bg-[#A0522D] transition" onClick={() => setIsCartOpen(false)}>Voir le panier</Link>
+                  <Link
+                    to="/cart"
+                    className="block text-center bg-[#8B4513] text-white px-4 py-2 rounded-lg hover:bg-[#A0522D] transition"
+                    onClick={() => setIsCartOpen(false)}
+                  >
+                    Voir le panier
+                  </Link>
                 </div>
               )}
             </div>
@@ -77,16 +110,36 @@ export default function Header() {
 
       {isMenuOpen && (
         <nav className="md:hidden bg-[#8B4513] mt-2 p-4 space-y-2">
-          <Link to="/" className="block hover:text-[#D9A066]" onClick={() => setIsMenuOpen(false)}>Accueil</Link>
-          <Link to="/about" className="block hover:text-[#D9A066]" onClick={() => setIsMenuOpen(false)}>À propos</Link>
-          <Link to="/products" className="block hover:text-[#D9A066]" onClick={() => setIsMenuOpen(false)}>Produits</Link>
-          <Link to="/contact" className="block hover:text-[#D9A066]" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+          <Link
+            to="/"
+            className="block hover:text-[#D9A066]"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Accueil
+          </Link>
+          <Link
+            to="/about"
+            className="block hover:text-[#D9A066]"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            À propos
+          </Link>
+          <Link
+            to="/products"
+            className="block hover:text-[#D9A066]"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Produits
+          </Link>
+          <Link
+            to="/contact"
+            className="block hover:text-[#D9A066]"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contact
+          </Link>
         </nav>
       )}
     </header>
   );
 }
-
-
-
-

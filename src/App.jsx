@@ -22,7 +22,8 @@ function App() {
               <Route path="/products" element={<Products />} />
               <Route path="/products/:id" element={<ProductDetail />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/cart" element={<Cart />} /> {/* 👈 nouvelle route */}
+              <Route path="/cart" element={<Cart />} />{" "}
+              {/* 👈 nouvelle route */}
             </Routes>
           </main>
           <Footer />
@@ -33,6 +34,3 @@ function App() {
 }
 
 export default App;
-
-
-
